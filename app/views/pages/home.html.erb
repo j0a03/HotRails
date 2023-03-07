@@ -2,9 +2,11 @@
 <p>Find me in app/views/pages/home.html.erb</p>
 <% if current_user %>
     <p> Bem Vindo <%= current_user.email %>!</p>
+    <p> você é um <%= current_user.role %></p>
     <p> texto grande </p>
+    <%= link_to "Sair",destroy_user_session_path,'data-turbo-method': :delete,class: "btn btn-danger"%>
 <% else %>
     <p> voce n esta logado, faça o favor de logar vagabundo</p>
-    <%= link_to "Logar", new_user_session_path%>
-    <%= link_to "Crie sua conta", new_user_registration_path%>
+    <%= link_to "Logar", new_user_session_path,class: "btn btn-primary"%>
+    <%= link_to "Crie sua conta", new_user_registration_path,class: "btn btn-success"%>
 <% end %>
