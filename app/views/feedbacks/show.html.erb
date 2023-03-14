@@ -1,2 +1,8 @@
-<h1>Feedbacks#show</h1>
-<p>Find me in app/views/feedbacks/show.html.erb</p>
+<h1>Mostrando o feedback</h1>
+<h2><%= @feedback.nome %></h2>
+<p><%= feedback.nome %></p>
+<p><%= feedback.desc %></p>
+<p><%= feedback.data%></p>
+<p><%= feedback.resolvido%></p>
+<p><%= feedback.usuario%></p>
+<%=link_to "voltar",feedbacks_path%>
