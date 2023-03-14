@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+Feedback.create(
+    nome: 'joao_vitor',
+    desc: 'joao_vitor',
+    data: '2022-08-10',
+    resolvido: false,
+    usuario: 'joao_vitor'
+)
+@feedback = Feedback.last
+puts @feedback.nome
