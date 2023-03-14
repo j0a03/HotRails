@@ -1,5 +1,6 @@
 class FeedbacksController < ApplicationController
   def index
+    @feedbacks = Feedback.all
   end
 
   def show
