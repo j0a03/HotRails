@@ -1,2 +1,27 @@
-<h1>Feedbacks#new</h1>
-<p>Find me in app/views/feedbacks/new.html.erb</p>
+<h1>Crie seu feedback</h1>
+<%= form_with model: @feedback,data: {type: :hotwire} do |form| %>
+ <div>
+  <%= form.label :nome%>
+  <%= form.text_field :nome%>
+ </div>
+ <div class="field">
+  <%= form.label :desc%>
+  <%= form.text_field :desc%>
+ </div>
+ <div class="field">
+  <%= form.label :data%>
+  <%= form.datetime_local_field :data%>
+ </div>
+ <div class="field">
+  <%= form.label :resolvido%>
+  <%= form.text_field :resolvido%>
+ </div>
+ <div class="field">
+  <%= form.label :usuario%>
+  <%= form.text_field :usuario%>
+ </div>
+<% end %>
+<%=link_to "voltar", feedbacks_path%>
+
+
+
