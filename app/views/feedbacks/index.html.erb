@@ -19,7 +19,7 @@
       <td><%= feedback.resolvido%></td>
       <td><%= feedback.usuario%></td>
       <td><%= link_to "Mostrar",feedback%></td>
-      <td><%= link_to "Editar",edit_post_path(feedback)%></td>
+      <td><%= link_to "Editar",edit_feedback_path(feedback)%></td>
       <td><%= button_to "Deletar",feedback,method: :delete%></td>
    <% end %>
  </tbody>
